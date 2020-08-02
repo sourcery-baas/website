@@ -13,6 +13,8 @@ Sourcery enables the construction of easily extensible data-driven systems, by h
 Centralize an immutable stream of facts.
 Decentralize the freedom to act, adapt and change.
 
+![sourcery](/images/diagram.png){:class="img-responsive"}
+
 ### Principles
 
 - Event Sourcing
@@ -47,25 +49,36 @@ Streams can be created from several data sources like:
 - A message broker. Connect your favorite message broker to feed your Sourcery app.
 - A Sourcery Processor. Combine and transform streams into new streams.
 
+  
+### Processors
+
+Processors take data from streams and allow you to do complex transformations to apply business logic. Most of your business rules will live here.
+
+- Stateless:
+  - Get streams as input and get streams as output.
+- Stateful
+  - Combine streams with "state" to create new streams.
+
 ### Views
 
 Views are read representations of your data that you need to perceive. A view can be represented as:
 
 - A HTTP endpoint that you can query to populate your UI. Get the data exactly shaped as you need, ready to be exposed.
 - A suscription that will emit events just as the get into any stream.
+  - real-time: get theme from the point the suscription starts
+  - catch-up: listen to all events from certain point in history to rebuild your custom representation
 
-### Processors
+A view could also be seen as a specital type of processor that creates state.
 
-Processors take data from streams and allow you to do complex transformations to apply business logic. Most of your business rules will leave here.
+For those familiar with Redux, think of views like reducers.
 
-## Tutorial
+## Example
 
 As an example we'll consider a very simple online store that we'll help us illustrate how you can use all of Sourcery componetes to build a complete workflow.
 
 After done we will be able to:
 
-- Manage a simple product stock.
-- Take orders in from a HTTP endpoint, validating available stock.
-- Get a view of ready orders.
-- Emit a webhook notification every time an order gets ready for shipment.
-
+- Manage a simple product inventory.
+- Take orders in from a HTTP endpoint.
+- Validate orders according to inventory.
+- Get status of order.
