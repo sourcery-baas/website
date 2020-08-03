@@ -31,9 +31,9 @@ Decentralize the freedom to act, adapt and change.
 
 Sourcery apps enable the construction of systems from three components:
 
-- Streams. To get data in.
-- Processors. That transform data according to business logic, shaping it to your needs.
-- Views. To get data out.
+- [Streams](https://sourcery-baas.github.io/docs/#streams). To get data in.
+- [Processors](https://sourcery-baas.github.io/docs/#stream-processors). That transform data according to business logic, shaping it to your needs.
+- [Views](https://sourcery-baas.github.io/docs/#views). To get data out.
 
 That's it. Focus on data not on infrastructure.
 
@@ -300,4 +300,6 @@ with:
 }
 ```
 
-> And there we have it ! Not fond or using an API. Good news is soon you will be able to do this with the new magical IDE, with a drag and drop UI, and the option to do easy integration testing of your whole workflow ! 
+> And there we have it ! Not fond or using an API ? Good news is soon you will be able to do this with the new magical IDE, with a drag and drop UI, and the option to do easy integration testing of your whole workflow ! 
+
+Fore more detailed usage guide check the [docs](https://sourcery-baas.github.io/docs/).
