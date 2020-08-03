@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>What is Sourcery ? | Event Sourcery</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="What is Sourcery ?" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="/website/" />
+<meta property="og:url" content="/website/" />
+<meta property="og:site_name" content="Event Sourcery" />
+<script type="application/ld+json">
+{"headline":"What is Sourcery ?","url":"/website/","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","name":"Event Sourcery","@type":"WebSite","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/website/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/website/feed.xml" title="Event Sourcery" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/website/">Event Sourcery</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/website/about/">About</a><a class="page-link" href="/website/">What is Sourcery ?</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home"><h1 class="page-heading">What is Sourcery ?</h1><h2 id="what-is-sourcery-">What is Sourcery ?</h2>
+<p>Backend as a Service for event driven architectures.</p>
+
+<p>Sourcery enables the construction of easily extensible data-driven systems, by harnessing the power of events.</p>
+
+<p>Centralize an immutable stream of facts.
+Decentralize the freedom to act, adapt and change.</p>
+
+<p><img src="/website/images/diagram.png" alt="sourcery" class="img-responsive" /></p>
+
+<h3 id="principles">Principles</h3>
+
+<ul>
+  <li>Event Sourcing
+    <ul>
+      <li>Events as the source of truth.</li>
+      <li>Immutable log.</li>
+    </ul>
+  </li>
+  <li>CQRS patterns.
+    <ul>
+      <li>Decouple writes from reads.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="how-it-works-">How it works ?</h2>
+
+<ol>
+  <li>Write data in, forming streams.</li>
+  <li>Transform data according to your rules.</li>
+  <li>Read data out for visualization or side-effects.</li>
+</ol>
+
+<p>Sourcery apps enable the construction of systems from three components:</p>
+
+<ul>
+  <li><a href="https://sourcery-baas.github.io/docs/#streams">Streams</a>. To get data in.</li>
+  <li><a href="https://sourcery-baas.github.io/docs/#stream-processors">Processors</a>. That transform data according to business logic, shaping it to your needs.</li>
+  <li><a href="https://sourcery-baas.github.io/docs/#views">Views</a>. To get data out.</li>
+</ul>
+
+<p>That’s it. Focus on data not on infrastructure.</p>
+
+<h2 id="concepts">Concepts</h2>
+
+<h3 id="streams">Streams</h3>
+
+<p>In Sourcery you create a Stream for each type of data that you want to write in your app.</p>
+
+<p>Streams can be created from several data sources like:</p>
+<ul>
+  <li>Custom HTTP endpoints. All you need is a unique name and a schema to start.</li>
+  <li>An external DB. Connect your DB and capture writes as they come.</li>
+  <li>A message broker. Connect your favorite message broker to feed your Sourcery app.</li>
+  <li>A Sourcery Processor. Combine and transform streams into new streams.</li>
+</ul>
+
+<h3 id="processors">Processors</h3>
+
+<p>Processors take data from streams and allow you to do complex transformations to apply business logic. Most of your business rules will live here.</p>
+
+<ul>
+  <li>Stateless:
+    <ul>
+      <li>Get streams as input and get streams as output.</li>
+    </ul>
+  </li>
+  <li>Stateful
+    <ul>
+      <li>Combine streams with “state” to create new streams.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="views">Views</h3>
+
+<p>Views are read representations of your data that you need to perceive. A view can be represented as:</p>
+
+<ul>
+  <li>A HTTP endpoint that you can query to populate your UI. Get the data exactly shaped as you need, ready to be exposed.</li>
+  <li>A suscription that will emit events just as the get into any stream.
+    <ul>
+      <li>real-time: get theme from the point the suscription starts</li>
+      <li>catch-up: listen to all events from certain point in history to rebuild your custom representation</li>
+    </ul>
+  </li>
+</ul>
+
+<p>A view could also be seen as a specital type of processor that creates state.</p>
+
+<p>For those familiar with Redux, think of views like reducers.</p>
+
+<h2 id="example">Example</h2>
+
+<p>As an example we’ll consider a very simple online store that we’ll help us illustrate how you can use all of Sourcery componetes to build a complete workflow.</p>
+
+<p>After done we will be able to:</p>
+
+<ul>
+  <li>Manage a simple product inventory.</li>
+  <li>Take orders in from a HTTP endpoint.</li>
+  <li>Validate orders according to inventory.</li>
+  <li>Get status of order.</li>
+</ul>
+
+<h3 id="create-an-api-endpoint-to-receive-orders">Create an API endpoint to receive orders</h3>
+
+<p>We first want to have a way to get orders in</p>
+
+<p><code class="language-plaintext highlighter-rouge">POST /api/streams</code></p>
+
+<p>with body:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"orders"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"schema"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"customerId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"productId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"number"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This will expose this endpoint for you: <code class="language-plaintext highlighter-rouge">POST /api/streams/orders</code> where you can POST with the previously defined “schema”. Your only concern when creating the schema is about what data you want to receive from your user, you don’t have to think about how you’re going to expose it or anything else.</p>
+
+<h3 id="create-an-api-endpoint-to-receive-product-inventory">Create an API endpoint to receive product inventory</h3>
+
+<p>Let’s say now that you want to keep an inventory, so you can later validate that you can only successfully accept an order if there’s enough stock of the wanted item.</p>
+
+<p><code class="language-plaintext highlighter-rouge">POST /api/streams</code></p>
+
+<p>with body:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"products"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"schema"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"number"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"number"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Again, that’s it, don’t worry about possible future use cases, worry only about your current needs, we’ll have space to evolve this later!</p>
+
+<p>Similarly, you now have available for you an endpoint to <code class="language-plaintext highlighter-rouge">POST /api/streams/product-inventory</code></p>
+
+<h3 id="create-a-view-to-check-order-status">Create a view to check order status</h3>
+
+<p>Now that you have some data coming in, it will be useful to have a way to read. In particular we want to be able to check the status of an order. We can simply create a view that will expose the latest state of our orders:</p>
+
+<p><code class="language-plaintext highlighter-rouge">POST /api/views</code></p>
+
+<p>with body:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"orders-view"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"orders"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>That’s it! Orders will be grouped by id by default, so that will be the param we use when querying through our new available endpoint to <code class="language-plaintext highlighter-rouge">GET /api/views/orders/{id}</code>.</p>
+
+<blockquote>
+  <p>Do I have to manually create a view like this every time !? No! You can also pass a <code class="language-plaintext highlighter-rouge">"viewable": true</code> flag when creating the stream so you get an automatic view for it, but we won’t discuss that here, we want to show the full process so you understand all the flexibility you get :)</p>
+</blockquote>
+
+<p>Since views are populated asynchronously, requests to this endpoint will issue a “long poll” until the id becomes available. If you POST any new data to /api/streams/orders, latest state will be reflected here. But … we don’t want you to be responsible to change order state, it should be updated reactively after validating it! We’re almost there, but first …</p>
+
+<h3 id="create-a-view-to-store-latest-product-inventory">Create a view to store latest product inventory</h3>
+
+<p>Since we want to keep the state of the inventory, we need a view for it. But we just want this state to be handled internally, we don’t need to expose it.</p>
+
+<p><code class="language-plaintext highlighter-rouge">POST /api/views</code></p>
+
+<p>with:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"products-view"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"products"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"exposed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>That’s it. By default it is not exposed, we just want to use this state internally to feed our next processor:</p>
+
+<h3 id="create-a-processor-that-joins-orders-data-product-data">Create a processor that joins orders data product data</h3>
+
+<p>Now we want to create some logic to validate orders in response to every newly submitted order. We want a processor that will join every order with stock data for the desired product. We need a <code class="language-plaintext highlighter-rouge">join</code>, so we get a new stream where we have together the order with the current avialable stock:</p>
+
+<p><code class="language-plaintext highlighter-rouge">POST /api/processors</code></p>
+
+<p>with:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"order-validation"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"orders"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"join"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"with"</span><span class="p">:</span><span class="w"> </span><span class="s2">"products-view"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"productId"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"order-with-stock"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This is instructing the processor to join orders with products-view, by matching orders <code class="language-plaintext highlighter-rouge">productId</code> field with the id field on <code class="language-plaintext highlighter-rouge">products-view</code>.</p>
+
+<p>The new stream will be named <code class="language-plaintext highlighter-rouge">order-with-stock</code>, where every entry will look similar to this:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"order"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"df4843fc-88eb-4709-8790-5acc02dbd65b"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"customerId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4834e62f-8a57-4c27-bb3c-3c0756de1e26"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"productId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19b561e8-04a2-47ef-84bd-c6a6e55c1b83"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"product"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19b561e8-04a2-47ef-84bd-c6a6e55c1b83"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"qty"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<blockquote>
+  <p>The schema of it can be changed if desired with a <code class="language-plaintext highlighter-rouge">map</code>, but that’s not discussed in this example.</p>
+</blockquote>
+
+<p>On the next episode we will do the actual validation now that we have the necessary data for it.</p>
+
+<blockquote>
+  <p>For didactical purposes we’re separating every processing step as a separate processor, but we will show at the end an example of a processor that do everything.</p>
+</blockquote>
+
+<h3 id="create-a-processor-that-validates-stock-for-orders">Create a processor that validates stock for orders</h3>
+
+<p>We can finally write validation. What we want is to check for the order and emit the order again with its updated status. For that we’re going to a split processor.</p>
+
+<p><code class="language-plaintext highlighter-rouge">POST /api/processors</code></p>
+
+<p>with:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"order-validation"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"order-with-stock"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"split"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"valid-orders"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"order.qty"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"$lte"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product.qty"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"invalid-orders"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"order.qty"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"$gt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product.qty"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This will emit to new streams <code class="language-plaintext highlighter-rouge">valid-orders</code> and <code class="language-plaintext highlighter-rouge">invalid.orders</code> with the same data, that you can now use to write some more logic reacting to them like sending a notification, or just use it in another orders processor to update the order, let’s do that.</p>
+
+<blockquote>
+  <p>At this point you would also need to write something to update stock for the product, but we won’t do that here. That’s your homework, sorry.</p>
+</blockquote>
+
+<h3 id="create-a-processor-to-update-order-status">Create a processor to update order status</h3>
+
+<p>Updating the status is just about emitting the same order again withe the updated value, for that we will create the following processor:</p>
+
+<p><code class="language-plaintext highlighter-rouge">POST /api/processors</code></p>
+
+<p>with:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"order-status-update"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valid-orders"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"map"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"$set"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"confirmed"</span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"orders"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<blockquote>
+  <p>We can write a similar one to update the status as “failed”.</p>
+</blockquote>
+
+<p>I know this is verbose, can we do better ? Yes! Now that we showed how you could write different streams, views and processors, we’ll se an example of an improved simplified processor</p>
+
+<h3 id="create-a-multi-step-processor-that-does-everything-itself">Create a multi-step processor that does everything itself</h3>
+
+<p><code class="language-plaintext highlighter-rouge">POST /api/processors</code></p>
+
+<p>with:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"order-validation"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"orders"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"multi"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"join"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"with"</span><span class="p">:</span><span class="w"> </span><span class="s2">"products-view"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"productId"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"split"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"order.qty"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"$lte"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product.qty"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"to"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"map"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"$set"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"confirmed"</span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"orders"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"order.qty"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"$gt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"product.qty"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"to"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"map"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"$set"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"failed"</span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+            </span><span class="nl">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"orders"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<blockquote>
+  <p>And there we have it ! Not fond or using an API ? Good news is soon you will be able to do this with the new magical IDE, with a drag and drop UI, and the option to do easy integration testing of your whole workflow !</p>
+</blockquote>
+
+<p>Fore more detailed usage guide check the <a href="https://sourcery-baas.github.io/docs/">docs</a>.</p>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/website/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Event Sourcery</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Event Sourcery</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/website/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/website/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
